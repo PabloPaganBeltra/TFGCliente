@@ -83,7 +83,6 @@ import {
     const iniciarSesion = async datos =>{
         try {
             const respuesta = await clienteAxios.post('/api/auth', datos);
-            console.log(respuesta);
             dispatch({
                 type: LOGIN_EXITOSO,
                 payload: respuesta.data
