@@ -25,13 +25,11 @@ const ListadoProyectos = () => {
     },[ mensaje ]);
 
     //Revisamos si proyectos tiene contenido
-    if(proyectos.length === 0 ) {return <p>No hay proyectos, empieza creando uno</p>};
+    if(proyectos.length === 0 ) {return <p>No hay proyectos, comienza creando uno</p>};
 
     return (  
         <ul className='listado-proyectos' >
-
             {alerta ? (<div className={`alerta ${alerta.categoria}`}>{alerta.msg}</div>) : null}
-
             <TransitionGroup>
                 {
                     proyectos.map(proyecto => (
@@ -40,11 +38,9 @@ const ListadoProyectos = () => {
                             timeout={200}
                             classNames='proyecto'
                         >
-
                             <Proyecto 
                                 proyecto={proyecto}
                             />
-
                         </CSSTransition>
                     ))
                 }

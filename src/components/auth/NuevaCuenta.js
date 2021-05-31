@@ -39,7 +39,7 @@ const NuevaCuenta = ( props ) => {
         guardarUsuario({
             ...usuario,
             [e.target.name]: e.target.value
-        })
+        });
     }
 
     //cuando el usuario queira iniciar sesion
@@ -73,10 +73,8 @@ const NuevaCuenta = ( props ) => {
             nombre,
             email,
             password
-        })
-
+        });
     }
-
 
     return ( 
         <div className='form-usuario'>
@@ -95,7 +93,7 @@ const NuevaCuenta = ( props ) => {
                             type='text'
                             id='nombre'
                             name='nombre'
-                            placeholder='Nombre Completo'
+                            placeholder='Nombre de usuario'
                             value={nombre}
                             onChange={onChange}
                         />
@@ -107,7 +105,7 @@ const NuevaCuenta = ( props ) => {
                             type='email'
                             id='email'
                             name='email'
-                            placeholder='ejemplo@ejemplo.ej'
+                            placeholder='Correo electrónico'
                             value={email}
                             onChange={onChange}
                         />
@@ -119,7 +117,7 @@ const NuevaCuenta = ( props ) => {
                             type='password'
                             id='password'
                             name='password'
-                            placeholder='Contraseña123'
+                            placeholder='Escribe tu contraseña'
                             value={password}
                             onChange={onChange}
                         />
@@ -131,7 +129,7 @@ const NuevaCuenta = ( props ) => {
                             type='password'
                             id='confirmar'
                             name='confirmar'
-                            placeholder='Contraseña123'
+                            placeholder='Confirmación de contraseña'
                             value={confirmar}
                             onChange={onChange}
                         />

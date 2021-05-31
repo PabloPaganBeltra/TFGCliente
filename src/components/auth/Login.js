@@ -4,7 +4,6 @@ import AlertaContext from '../../context/alertas/alertaContext';
 import AuthContext from '../../context/autenticacion/authContext';
 
 const Login = (props) => {
-
     //extraer valores del context
     const alertaContext = useContext( AlertaContext );
     const { alerta, mostrarAlerta } = alertaContext;
@@ -37,22 +36,20 @@ const Login = (props) => {
         guardarUsuario({
             ...usuario,
             [e.target.name]: e.target.value
-        })
+        });
     }
 
     //cuando el usuario queira iniciar sesion
     const onSubmit = e =>{
         e.preventDefault();
 
-
         //validar que no haya campos vacios 
         if(email.trim() === '' || password.trim() === ''){
-            mostrarAlerta(' Todos los campos son oblitagorios', 'alerta-error');
+            mostrarAlerta('Todos los campos son oblitagorios', 'alerta-error');
         }
 
         //pasarlo al action (fucnion definida en reducer)
         iniciarSesion( { email, password });
-
     }
 
 
@@ -73,7 +70,7 @@ const Login = (props) => {
                             type='email'
                             id='email'
                             name='email'
-                            placeholder='ejemplo@ejemplo.ej'
+                            placeholder='Correo electrónico'
                             value={email}
                             onChange={onChange}
                         />
@@ -85,7 +82,7 @@ const Login = (props) => {
                             type='password'
                             id='password'
                             name='password'
-                            placeholder='Contraseña123'
+                            placeholder='Escribe tu contraseña'
                             value={password}
                             onChange={onChange}
                         />

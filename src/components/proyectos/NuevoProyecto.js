@@ -69,7 +69,7 @@ const NuevoProyecto = () => {
                         <input
                             type='text'
                             className='input-text'
-                            placeholder='nombre proyecto'
+                            placeholder='Nombre de Proyecto'
                             name='nombre'
                             value={nombre}
                             onChange={onChangeProyecto}
@@ -78,7 +78,7 @@ const NuevoProyecto = () => {
                         <input 
                             type='submit' 
                             className='btn btn-primario btn-block'
-                            value='agregar proyecto'
+                            value='Agregar Proyecto'
                         />
                     </form>
                 ) : null }

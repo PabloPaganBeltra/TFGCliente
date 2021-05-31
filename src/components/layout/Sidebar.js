@@ -5,10 +5,8 @@ import ListadoProyectos from '../proyectos/ListadoProyectos';
 const Sidebar = () => {
     return ( 
         <aside>
-            <h1>TFG<span>Final</span></h1>
-
+            <h1>Organiza<span>Online</span></h1>
             <NuevoProyecto />
-
             <div className="proyectos">
                 <h2>Tus Proyectos</h2>
                 <ListadoProyectos />
