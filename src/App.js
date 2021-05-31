@@ -28,7 +28,7 @@ xhttp.onreadystatechange = function() {
       console.log("error")
     }
 };
-xhttp.open("GET", "https://tfgservidor.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJryijc9s0K4gRG9aU7SDTXdA&key=[YOURAPIKEY]", true);
+xhttp.open("GET", "https://tfgservidor.herokuapp.com/https:/", true);
 xhttp.send();
 
 function App() {
