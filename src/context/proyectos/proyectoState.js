@@ -23,7 +23,6 @@ const ProyectoState = props => {
     }
 
     //Dispatch para ejecutar acciones, igual useState
-
     const [state, dispatch] = useReducer(proyectoReducer, initialState)
 
     //Serie de funciones para el crud
@@ -58,7 +57,6 @@ const ProyectoState = props => {
 
         try {
             const resultado = await clienteAxios.post('/api/proyectos', proyecto);
-            console.log(resultado);
             //Insertar proyecto en el state
             dispatch({
                 type: AGREGAR_PROYECTO,

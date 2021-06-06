@@ -25,7 +25,7 @@ const NuevoProyecto = () => {
         guardarProyecto({
             ...proyecto,
             [e.target.name] : e.target.value
-        })
+        });
     }
 
     //usuario envia proyecto
@@ -45,12 +45,10 @@ const NuevoProyecto = () => {
         //reiniar el form
             guardarProyecto({
                 nombre:''
-            })
+            });
     }
 
     //Mostrar formulario
-    
-
     return ( 
         <Fragment>
             <button
@@ -58,7 +56,6 @@ const NuevoProyecto = () => {
                 className='btn btn-block btn-primario'
                 onClick={ ()=> mostrarFormulario() }
             >Nuevo Proyecto</button>
-
             {
                 formulario ?
                 (
@@ -82,7 +79,6 @@ const NuevoProyecto = () => {
                         />
                     </form>
                 ) : null }
-
             {errorformulario ? <p className='mensaje error'>El nombre del proyecto es obligatorio</p> : null}
         </Fragment>
         

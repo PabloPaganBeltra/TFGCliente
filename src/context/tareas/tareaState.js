@@ -73,8 +73,6 @@ const TareaState = props => {
         }
     }
 
-    
-
     //edita o modifica una tarea
     const actualizarTarea = async tarea => {
         try {
@@ -95,8 +93,6 @@ const TareaState = props => {
             payload : tarea
         })
     }
-
-   
 
     return (
         <TareaContext.Provider

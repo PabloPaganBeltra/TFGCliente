@@ -30,7 +30,6 @@ const Tarea = ({tarea}) => {
         }
         actualizarTarea(tarea);
     }
-
     //Seleccionar una tarea
     const seleccionarTarea = tarea =>{
         guardarTareaActual(tarea);
@@ -39,7 +38,6 @@ const Tarea = ({tarea}) => {
     return ( 
         <li className='tarea sombra'>
             <p>{tarea.nombre}</p>
-
             <div className='estado'>
                 {tarea.estado 
                 ?  
@@ -57,7 +55,7 @@ const Tarea = ({tarea}) => {
                         className='incompleto'
                         onClick={ () => cambiarEstado(tarea)}
                     >Incompleto</button>
-                )   
+                )
                 }
             </div>  
             <div className='acciones'>
@@ -66,7 +64,6 @@ const Tarea = ({tarea}) => {
                     className='btn btn-primario'
                     onClick={ ()=> seleccionarTarea(tarea) }
                 >Editar</button>
-
                 <button
                     type='button'
                     className='btn btn-secundario'

@@ -19,7 +19,6 @@ const Login = (props) => {
         if(mensaje){
             mostrarAlerta( mensaje.msg, mensaje.categoria);
         }
-        
         //eslint-disable-next-line
     }, [mensaje, autenticado, props.history ]);
 
@@ -42,16 +41,13 @@ const Login = (props) => {
     //cuando el usuario queira iniciar sesion
     const onSubmit = e =>{
         e.preventDefault();
-
         //validar que no haya campos vacios 
         if(email.trim() === '' || password.trim() === ''){
             mostrarAlerta('Todos los campos son oblitagorios', 'alerta-error');
         }
-
         //pasarlo al action (fucnion definida en reducer)
         iniciarSesion( { email, password });
     }
-
 
     return ( 
         <div className='form-usuario'>
